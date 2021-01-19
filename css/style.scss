@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+}
+
+.header {
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    h1 {
+        margin: 10px;
+        font-size: 72px;
+        color: rgb(126, 202, 136);
+        text-shadow: 0 0 20px red, 0 0 20px red;
+        text-decoration: underline;
+    }
+    h3 {
+        margin: 10px;
+    }
+    h3 {
+        margin: 10px;
+    }
+}
+
+.content {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.navigation {
+    ul li {
+        float: left;
+        list-style: none;
+        a {
+            padding: 12px;
+            text-decoration: none;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 600;
+            color: black;
+        }
+        a:hover {
+            color:red;
+        }
+    }
+}
