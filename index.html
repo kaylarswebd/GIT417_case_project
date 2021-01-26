@@ -12,12 +12,10 @@
 
 <body>
 
-
-
     <section class="header">
         <script>
             document.write(
-            "<h1>Liverpool Fan Site</h1>") //This writes the 
+                "<h1>Liverpool Fan Site</h1>") //This writes the 
         </script>
         <script>
             document.write(Date()); //This inputs the date
@@ -37,32 +35,45 @@
             </ul>
         </nav>
 
+        <br><br><br>
         <div class="shop">
             <h1>Liverpool Hat</h1>
             <img src="images/EPL-RGW04GWS-BKC-HR-F.jpg" alt="">
             <p>Price: 25.00$</p>
-        <form action="">
-            <input type="number" id="num">
-            <button class="add" onclick="showTotal()">See Price with Tax and Shipping</button>
-        </form>
-            <p id="showPrice"></p>
+            <input type="number" id="num"/>
+            <button class="add" id="button" onclick="showTotal()">
+              See Price with Tax and Shipping
+            </button>
+            <p id="value"></p>
+          </div>
         </div>
+    
+        <script>
+          var data = {  // logging input value 
+            qty: "",
+            total: "",
+          };
+    
+          var inputField = document.getElementById("num"); // values of input
+          var button = document.getElementById("button");  // button
+          var valueField = document.getElementById("value"); // defining value field
+          var salePrice = 25; // sale price
+          var saleShipping = 10; // price of shipping
+          var saleTax = 1.75; // price of sale
+    
+            // binding the input so that the input calculates correctly
+          inputField.addEventListener("input", function () {
+            saleHats = 0
+            data.qty = inputField.value;  
+            saleHats = data.qty * salePrice;
+            saleTotal = saleHats + saleShipping + saleTax;
+          });
+    
+          function showTotal() {
+            document.getElementById("value").innerHTML = "Total = " + saleTotal + "$";
+          }
+        </script>
 
-    </div>
-
-    <script>
-        var salePrice = 25;
-        var saleShipping = 10;
-        var saleTax = 1.75;
-        var howMany = document.getElementById("num").value;
-        var saleHats = howMany * salePrice;
-        var saleTotal = saleHats + saleShipping + saleTax;
-        function showTotal() {
-            document.getElementById("showPrice").innerHTML = "Total = " + saleTotal + "$";
-            console.log(howMany)
-        }
-    </script>
- 
 </body>
 
 </html>
