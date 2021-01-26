@@ -44,4 +44,17 @@
 .navigation ul li a:hover {
   color: red;
 }
+
+.shop {
+  margin: 10px;
+}
+
+.shop h1 {
+  font-family: 'Work Sans', sans-serif;
+  margin: 10px;
+}
+
+.shop img {
+  height: 175px;
+}
 /*# sourceMappingURL=style.css.map */

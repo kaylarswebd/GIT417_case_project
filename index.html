@@ -1,36 +1,68 @@
 <!doctype html>
-<html>
+<html lang="">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Case Project</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600;900&display=swap" rel="stylesheet">
-        <script src="script/modernizr.custom.05819.js"></script>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Case Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600;900&display=swap" rel="stylesheet">
+    <script src="script/modernizr.custom.05819.js"></script>
+</head>
 
 <body>
 
+
+
     <section class="header">
-        <h1>Liverpool Fan Site</h1>
+        <script>
+            document.write(
+            "<h1>Liverpool Fan Site</h1>") //This writes the 
+        </script>
+        <script>
+            document.write(Date()); //This inputs the date
+        </script>
         <h3>A Site for Liverpool fans</h3>
         <h3>Home Page</h3>
     </section>
 
-<div class="content">
+    <div class="content">
 
-    <nav class="navigation">
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="pagetwo.html">PLAYERS</a></li>
-            <li><a href="pagethree.html">STATES</a></li>
-            <li><a href="pagefour.html">PAGE FOUR</a></li>
-        </ul>
-    </nav>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="pagetwo.html">PLAYERS</a></li>
+                <li><a href="pagethree.html">STATES</a></li>
+                <li><a href="pagefour.html">PAGE FOUR</a></li>
+            </ul>
+        </nav>
 
-</div>
+        <div class="shop">
+            <h1>Liverpool Hat</h1>
+            <img src="images/EPL-RGW04GWS-BKC-HR-F.jpg" alt="">
+            <p>Price: 25.00$</p>
+        <form action="">
+            <input type="number" id="num">
+            <button class="add" onclick="showTotal()">See Price with Tax and Shipping</button>
+        </form>
+            <p id="showPrice"></p>
+        </div>
 
+    </div>
+
+    <script>
+        var salePrice = 25;
+        var saleShipping = 10;
+        var saleTax = 1.75;
+        var howMany = document.getElementById("num").value;
+        var saleHats = howMany * salePrice;
+        var saleTotal = saleHats + saleShipping + saleTax;
+        function showTotal() {
+            document.getElementById("showPrice").innerHTML = "Total = " + saleTotal + "$";
+            console.log(howMany)
+        }
+    </script>
+ 
 </body>
 
 </html>
