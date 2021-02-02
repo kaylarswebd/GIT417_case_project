@@ -13,25 +13,71 @@
 <body>
 
     <section class="header">
-        <h1>Liverpool Fan Site</h1>
+        <script>
+            document.write(
+                "<h1>Liverpool Fan Site</h1>") //This writes the 
+        </script>
+        <script>
+            document.write(Date()); //This inputs the date
+        </script>
         <h3>A Site for Liverpool fans</h3>
-        <h3>Page Two</h3>
+        <h3>Shop</h3>
     </section>
 
-<div class="content">
+    <div class="content">
 
-    <nav class="navigation">
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="pagetwo.html">PLAYERS</a></li>
-            <li><a href="pagethree.html">STATES</a></li>
-            <li><a href="pagefour.html">PAGE FOUR</a></li>
-        </ul>
-    </nav>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="pagetwo.html">SHOP</a></li>
+                <li><a href="pagethree.html">STATS</a></li>
+                <li><a href="pagefour.html">PAGE FOUR</a></li>
+            </ul>
+        </nav>
 
-</div>
+
+        <br><br><br>
+        <div class="shop">
+            <h1>Liverpool Hat</h1>
+            <img src="images/EPL-RGW04GWS-BKC-HR-F.jpg" alt="">
+            <p>Price: 25.00$</p>
+            <p>Shipping: 10.00$</p>
+            <p>Sales Tax: 1.75$</p>
+            <input type="number" id="num" />
+            <button class="add" id="button" onclick="showTotal()">
+                See Price with Tax and Shipping
+            </button>
+            <p id="value"></p>
+        </div>
+
+
+        <script>
+            var data = { // logging input value 
+                qty: "",
+                total: "",
+            };
+
+            var inputField = document.getElementById("num"); // values of input
+            var valueField = document.getElementById("value"); // defining value field
+            var button = document.getElementById("button"); // button
+            var salePrice = 25; // sale price
+            var saleShipping = 10; // price of shipping
+            var saleTax = 1.75; // price of sale
+
+            // binding the input so that the input calculates correctly
+            inputField.addEventListener("input", function () {
+                data.qty = inputField.value;
+                saleHats = data.qty * salePrice;
+                saleTotal = saleHats + saleShipping + saleTax;
+            });
+
+            function showTotal() {
+                document.getElementById("value").innerHTML = "Total = " + saleTotal + "$";
+            }
+        </script>
+
+    </div> <!-- end of content -->
 
 </body>
-
 
 </html>

@@ -29,52 +29,54 @@
         <nav class="navigation">
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="pagetwo.html">PLAYERS</a></li>
-                <li><a href="pagethree.html">STATES</a></li>
+                <li><a href="pagetwo.html">SHOP</a></li>
+                <li><a href="pagethree.html">STATS</a></li>
                 <li><a href="pagefour.html">PAGE FOUR</a></li>
             </ul>
         </nav>
 
-        <br><br><br>
-        <div class="shop">
-            <h1>Liverpool Hat</h1>
-            <img src="images/EPL-RGW04GWS-BKC-HR-F.jpg" alt="">
-            <p>Price: 25.00$</p>
-            <p>Shipping: 10.00$</p>
-            <p>Sales Tax: 1.75$</p>
-            <input type="number" id="num"/>
-            <button class="add" id="button" onclick="showTotal()">
-              See Price with Tax and Shipping
-            </button>
-            <p id="value"></p>
-          </div>
-        </div>
-    
-        <script>
-          var data = {  // logging input value 
-            qty: "",
-            total: "",
-          };
-    
-          var inputField = document.getElementById("num"); // values of input
-          var button = document.getElementById("button");  // button
-          var valueField = document.getElementById("value"); // defining value field
-          var salePrice = 25; // sale price
-          var saleShipping = 10; // price of shipping
-          var saleTax = 1.75; // price of sale
-    
-            // binding the input so that the input calculates correctly
-          inputField.addEventListener("input", function () {
-            saleHats = 0
-            data.qty = inputField.value;  
-            saleHats = data.qty * salePrice;
-            saleTotal = saleHats + saleShipping + saleTax;
-          });
-    
-          function showTotal() {
-            document.getElementById("value").innerHTML = "Total = " + saleTotal + "$";
-          }
-        </script>
+<br><br><br>
+<h3>Goals scored by liverpool players in the 2020-2021 Premier League so far.</h3>
+
+<ul>
+    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="13"/> Mohamed Salah - 13</li>
+    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="7" /> Sadio Mané - 7</li>
+    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="6" /> Roberto Firmino - 6</li>
+    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="5" /> Diogo Jota - 5</li>
+    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="1" /> Andrew Robertson - 1</li>
+</ul>
+<br>
+<p>Total goals by players checked:</p>
+
+<input value="" type="text" name="totalStats" />
+
+<script>
+
+function calcTotal() { //function to make the whole thing work.
+  var input = document.getElementsByName("goals");
+  var totalStats = 0;
+  for (var i = 0; i < input.length; i++) { //calculation to get value correctly.
+    if (input[i].checked) {
+      totalStats += (input[i].value) * 1;
+    } 
+    else {
+        document.getElementsByName.innerHTML = "none";
+    }
+  }
+  document.getElementsByName("totalStats")[0].value = totalStats + " Goals";  //value populating in input.
+}
+
+</script>
+
+
+    </div>
+
+<script>
+
+
+
+
+</script>
 
 </body>
 
