@@ -34,9 +34,46 @@
                 <li><a href="pagefour.html">PAGE FOUR</a></li>
             </ul>
         </nav>
-
 <br><br><br>
+
+
+<script>
+  //this is some script that I achually got to work if you leave a input blank under the statement that says "enter your e-mail for you chance to win" then you will be hit with an error message that will only let you "submit" when you have the form completed. however I was unable to get it to work using the try, catch, finally meathod. I ran into a couple different problems with this because I wasent getting the error to pop up but I used the console.log in the console window in chrome to see what the problem was. Got a syntax for simple mistakes that were easy to find with a close second look.
+  function validateForm() {
+    var asdf = document.forms["form"]["name"].value;
+    if (asdf == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    var asdf = document.forms["form"]["email"].value;
+    if (asdf == "") {
+      alert("E-mail must be filled out");
+      return false;
+    }
+    var asdf = document.forms["form"]["player"].value;
+    if (asdf == "") {
+      alert("Favorite player must be filled out");
+      return false;
+    }
+  }
+  </script>
+
+    <form name="form" action="/action_page.php" onsubmit="return validateForm()" method="post">
+      <h2>Enter your E-Mail for your chance to win!</h2> <br>
+      <input type="text" name="name" value="Name"> <br><br>
+      <input type="text" name="email" value=""> <br><br>
+      <input type="text" name="player" value="Favorite player">
+      <input type="submit" value="Submit">
+    </form>
+    </div>
+
+
+<!--division line between two different trys at the assignment-->
+
+<div class="stats">
 <h3>Goals scored by liverpool players in the 2020-2021 Premier League so far.</h3>
+
+<header></header>
 
 <ul>
     <li><input name="goals" type="checkbox" onclick="calcTotal()" value="13"/> Mohamed Salah - 13</li>
@@ -47,11 +84,12 @@
 </ul>
 <br>
 <p>Total goals by players checked:</p>
-
 <input value="" type="text" name="totalStats" />
+</div>
 
+  
 <script>
-
+  //here I tried getting the try,catch,finally to work but was only met with a working script and was unable to get the script to throw an error message up on the page. This i think was not working because the input button would not work.
 function calcTotal() { //function to make the whole thing work.
   var input = document.getElementsByName("goals");
   var totalStats = 0;
@@ -65,18 +103,38 @@ function calcTotal() { //function to make the whole thing work.
   }
   document.getElementsByName("totalStats")[0].value = totalStats + " Goals";  //value populating in input.
 }
-
+      
+function varifyStats() {
+    var input = document.getElementsByName("goals");
+    var statsComplete = 1;
+    try {
+        for (var i = 0; i < input.length; i++) { 
+            if (document.getElementsByName("goals")[i].checked) {
+                statsComplete = true;
+                messageElement.innerHTML = "";
+                testFormCompleteness();
+                i = input.length;
+            }
+        } 
+        if (i === 0) {
+            throw "Please select a player";
+        }
+    }  
+    catch(message) {
+        statsComplete = false;
+        messageHeadElement.innerHTML = "";
+        messageHeadElement.innerHTML = message;
+    }
+    finally {
+      statsComplete = validity;
+      messageElement.innerHTML = messageText;
+      messageHeadElement.innerHTML = "";
+      testFormCompleteness()
+    }
+} 
 </script>
 
 
-    </div>
-
-<script>
-
-
-
-
-</script>
 
 </body>
 

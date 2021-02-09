@@ -35,6 +35,43 @@
         </ul>
     </nav>
 
+    <br><br><br>
+<div class="stats">
+<h3>Goals scored by liverpool players in the 2020-2021 Premier League so far.</h3>
+
+<ul>
+    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="13"/> Mohamed Salah - 13</li>
+    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="7" /> Sadio Mané - 7</li>
+    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="6" /> Roberto Firmino - 6</li>
+    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="5" /> Diogo Jota - 5</li>
+    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="1" /> Andrew Robertson - 1</li>
+</ul>
+<br>
+<p>Total goals by players checked:</p>
+
+<input value="" type="text" name="totalStats" />
+
+</div>
+<script>
+
+function calcTotal() { //function to make the whole thing work.
+  var input = document.getElementsByName("goals");
+  var totalStats = 0;
+  for (var i = 0; i < input.length; i++) { //calculation to get value correctly.
+    if (input[i].checked) {
+      totalStats += (input[i].value) * 1;
+    } 
+    else {
+        document.getElementsByName.innerHTML = "none";
+    }
+  }
+  document.getElementsByName("totalStats")[0].value = totalStats + " Goals";  //value populating in input.
+}
+
+</script>
+
+
+
 </div>
 
 </body>
