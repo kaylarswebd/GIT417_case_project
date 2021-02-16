@@ -1,14 +1,16 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>Case Project</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="reconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600;900&display=swap" rel="stylesheet">
     <script src="script/modernizr.custom.05819.js"></script>
 </head>
+
+
 
 <body>
 
@@ -37,102 +39,50 @@
 
 <br><br><br>
 
+<div class="assignment">
+  <h1>Liverpool wants you to be safe on the internet!</h1>
 
-<script>
-  //this is some script that I achually got to work if you leave a input blank under the statement that says "enter your e-mail for you chance to win" then you will be hit with an error message that will only let you "submit" when you have the form completed. however I was unable to get it to work using the try, catch, finally meathod. I ran into a couple different problems with this because I wasent getting the error to pop up but I used the console.log in the console window in chrome to see what the problem was. Got a syntax for simple mistakes that were easy to find with a close second look.
-  function validateForm() {
-    var asdf = document.forms["form"]["name"].value;
-    if (asdf == "") {
-      alert("Name must be filled out");
-      return false;
-    }
-    var asdf = document.forms["form"]["email"].value;
-    if (asdf == "") {
-      alert("E-mail must be filled out");
-      return false;
-    }
-    var asdf = document.forms["form"]["player"].value;
-    if (asdf == "") {
-      alert("Favorite player must be filled out");
-      return false;
-    }
-  }
-  </script>
+  <h2>Here are some links that will teach you a little about website security.</h2><br>
+  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Modzilla's Website Security</a><p>On this website it tell you about what website security is, different security threatsSQL injection, and some others.</p><br>
+  <a href="https://www.upguard.com/blog/the-website-security-checklist">Upguard</a><p>On the Upguard site, it will tell you how to best protect your self while looking on the web. It talks about about SSL certificates, HTTP's, and obscure Header info which we have talked about before.</p><br>
+  <a href="https://us-cert.cisa.gov/ncas/tips/ST18-006">CISA</a><p>CISA is a government agency that is dedicated to cyber security. In this website it tells you about the whats, whys and hows on cybersecurity threats and prevention.</p><br>
 
-    <form name="form" action="/action_page.php" onsubmit="return validateForm()" method="post">
-      <h2>Enter your E-Mail for your chance to win!</h2> <br>
-      <input type="text" name="name" value="Name"> <br><br>
-      <input type="text" name="email" value=""> <br><br>
-      <input type="text" name="player" value="Favorite player">
-      <input type="submit" value="Submit">
-    </form>
-  
-<br><br><br>
 
-<!--division line between two different trys at the assignment-->
-
-<div class="stats">
-<h3>Goals scored by liverpool players in the 2020-2021 Premier League so far.</h3>
-
-<header></header>
-
-<ul>
-    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="13"/> Mohamed Salah - 13</li>
-    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="7" /> Sadio Mané - 7</li>
-    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="6" /> Roberto Firmino - 6</li>
-    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="5" /> Diogo Jota - 5</li>
-    <li><input name="goals" type="checkbox" onclick="calcTotal()" value="1" /> Andrew Robertson - 1</li>
-</ul>
-<br>
-<p>Total goals by players checked:</p>
-<input value="" type="text" name="totalStats" />
+  <h2>These are some properties that are called Navigator Objects that can obtain information using JavaScript.</h2>
+  <p>These Navigator Objects are properties that JavaScript can use that can tell what someone user properties are. These simple commands can tell a lot about the user’s location, computer specs, and about the browser. And that information in the wrong hands is no good.
+  </p>
+  <p>First there is the appName property, if you look in the console log after in the inspecting mode, I have put this code there and it will tell the name of the web browser that is displaying the page. This is dangerous because it can tell people what browser you are using and that information you do not want to be in the wrong hands.</p>
+  <p>Next is the appVersion, this property will tell the user what version of the browser you are using. So not only can someone see what browser you are using, but they can also tell what version you are using.</p>
+  <p>These next two properties to me are a little bit scarier than the first two. the first one that I am going to talk about is the geoLocation. This property is very dangers because people can now see where you are! This obviously does not need explanation as to why it is a bad thing if someone you would not wanting to know this information did.</p>
+  <p>Another property that I am going to talk about is the onLine property. This is the console log will display with a true or false weather or not the person looking at the page has an internet connect or not.</p>
+  <p>The next one that I am going to talk about is the platform property. This property if logged via console.log will show the persons operating system that is being used on the client’s computer.</p>
+  <p>And finally, is the userAgent property. Not only can this property give information about your browser, but it can also get information about your platform name and compatibility as well.</p>
+  <p>These are all properties that contain very sensitive information about the clients computer and other information that in the wrong hands can really be dangerous if the information is available. If someone would want to get into your computer the would have a really good start if they had all of this information. </p>
 </div>
 
-  
+<br><br><br>
+<h3>All of the information below is showing you what the properties above can do!</h3>
+<p id="one">Click here for all the information listed above!</p>
+<p id="two">Click here for all the information listed above!</p>
+<p id="three">Click here for all the information listed above!</p>
+<p id="four">Click here for all the information listed above!</p>
+<p id="five">Click here for all the information listed above!</p>
+<p id="six">Click here for all the information listed above!</p>
+
 <script>
-  //here I tried getting the try,catch,finally to work but was only met with a working script and was unable to get the script to throw an error message up on the page. This i think was not working because the input button would not work.
-function calcTotal() { //function to make the whole thing work.
-  var input = document.getElementsByName("goals");
-  var totalStats = 0;
-  for (var i = 0; i < input.length; i++) { //calculation to get value correctly.
-    if (input[i].checked) {
-      totalStats += (input[i].value) * 1;
-    } 
-    else {
-        document.getElementsByName.innerHTML = "none";
-    }
-  }
-  document.getElementsByName("totalStats")[0].value = totalStats + " Goals";  //value populating in input.
-}
-      
-function varifyStats() {
-    var input = document.getElementsByName("goals");
-    var statsComplete = 1;
-    try {
-        for (var i = 0; i < input.length; i++) { 
-            if (document.getElementsByName("goals")[i].checked) {
-                statsComplete = true;
-                messageElement.innerHTML = "";
-                testFormCompleteness();
-                i = input.length;
-            }
-        } 
-        if (i === 0) {
-            throw "Please select a player";
-        }
-    }  
-    catch(message) {
-        statsComplete = false;
-        messageHeadElement.innerHTML = "";
-        messageHeadElement.innerHTML = message;
-    }
-    finally {
-      statsComplete = validity;
-      messageElement.innerHTML = messageText;
-      messageHeadElement.innerHTML = "";
-      testFormCompleteness()
-    }
-} 
+  document.getElementById("one").innerHTML = "web browser name: " + navigator.appName;
+  document.getElementById("two").innerHTML = "web browser browser version: " + navigator.appVersion;
+  document.getElementById("three").innerHTML = "web browser location: " + navigator.geoLocation;
+  document.getElementById("four").innerHTML = "internet access: " + navigator.onLine;
+  document.getElementById("five").innerHTML = "operating system: " + navigator.platform;
+  document.getElementById("six").innerHTML = "user agent information: " + navigator.userAgent;
+
+  console.log("web browser name: " + navigator.appName);
+  console.log("web browser browser version: " + navigator.appVersion);
+  console.log("web browser location: " + navigator.geoLocation);
+  console.log("internet access: " + navigator.onLine);
+  console.log("operating system: " + navigator.platform);
+  console.log("user agent information: " + navigator.userAgent);
 </script>
 
 </div>

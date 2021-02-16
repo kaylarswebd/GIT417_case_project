@@ -35,6 +35,37 @@
         </ul>
     </nav>
 
+<br><br><br>
+
+<script>
+    //this is some script that I achually got to work if you leave a input blank under the statement that says "enter your e-mail for you chance to win" then you will be hit with an error message that will only let you "submit" when you have the form completed. however I was unable to get it to work using the try, catch, finally meathod. I ran into a couple different problems with this because I wasent getting the error to pop up but I used the console.log in the console window in chrome to see what the problem was. Got a syntax for simple mistakes that were easy to find with a close second look.
+    function validateForm() {
+      var asdf = document.forms["form"]["name"].value;
+      if (asdf == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+      var asdf = document.forms["form"]["email"].value;
+      if (asdf == "") {
+        alert("E-mail must be filled out");
+        return false;
+      }
+      var asdf = document.forms["form"]["player"].value;
+      if (asdf == "") {
+        alert("Favorite player must be filled out");
+        return false;
+      }
+    }
+    </script>
+  
+      <form name="form" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        <h2>Enter your E-Mail for your chance to win!</h2> <br>
+        <input type="text" name="name" value=""> name<br><br>
+        <input type="text" name="email" value=""> email<br><br>
+        <input type="text" name="player" value=""> favorite player <br><br>
+        <input type="submit" value="Submit">
+      </form>
+
 </div>
 
 </body>
