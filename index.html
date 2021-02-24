@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
 
 <head>
@@ -34,58 +33,58 @@
                 <li><a href="pagetwo.html">SHOP</a></li>
                 <li><a href="pagethree.html">STATS</a></li>
                 <li><a href="pagefour.html">PAGE FOUR</a></li>
+                <li><a href="pagefive.html">cyber security page</a></li>
             </ul>
         </nav>
 
-<br><br><br>
+        <br><br><br>
 
-<div class="assignment">
-  <h1>Liverpool wants you to be safe on the internet!</h1>
+            <form name="form" action="/action_page.php" onsubmit="return validateForm()" method="post">
+              <h2>Enter your E-Mail for your chance to win!</h2> <br>
+              <input type="checkbox" name="checkbox"> I understand I might get emails. <br><br>
 
-  <h2>Here are some links that will teach you a little about website security.</h2><br>
-  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Modzilla's Website Security</a><p>On this website it tell you about what website security is, different security threatsSQL injection, and some others.</p><br>
-  <a href="https://www.upguard.com/blog/the-website-security-checklist">Upguard</a><p>On the Upguard site, it will tell you how to best protect your self while looking on the web. It talks about about SSL certificates, HTTP's, and obscure Header info which we have talked about before.</p><br>
-  <a href="https://us-cert.cisa.gov/ncas/tips/ST18-006">CISA</a><p>CISA is a government agency that is dedicated to cyber security. In this website it tells you about the whats, whys and hows on cybersecurity threats and prevention.</p><br>
-
-
-  <h2>These are some properties that are called Navigator Objects that can obtain information using JavaScript.</h2>
-  <p>These Navigator Objects are properties that JavaScript can use that can tell what someone user properties are. These simple commands can tell a lot about the user’s location, computer specs, and about the browser. And that information in the wrong hands is no good.
-  </p>
-  <p>First there is the appName property, if you look in the console log after in the inspecting mode, I have put this code there and it will tell the name of the web browser that is displaying the page. This is dangerous because it can tell people what browser you are using and that information you do not want to be in the wrong hands.</p>
-  <p>Next is the appVersion, this property will tell the user what version of the browser you are using. So not only can someone see what browser you are using, but they can also tell what version you are using.</p>
-  <p>These next two properties to me are a little bit scarier than the first two. the first one that I am going to talk about is the geoLocation. This property is very dangers because people can now see where you are! This obviously does not need explanation as to why it is a bad thing if someone you would not wanting to know this information did.</p>
-  <p>Another property that I am going to talk about is the onLine property. This is the console log will display with a true or false weather or not the person looking at the page has an internet connect or not.</p>
-  <p>The next one that I am going to talk about is the platform property. This property if logged via console.log will show the persons operating system that is being used on the client’s computer.</p>
-  <p>And finally, is the userAgent property. Not only can this property give information about your browser, but it can also get information about your platform name and compatibility as well.</p>
-  <p>These are all properties that contain very sensitive information about the clients computer and other information that in the wrong hands can really be dangerous if the information is available. If someone would want to get into your computer the would have a really good start if they had all of this information. </p>
-</div>
-
-<br><br><br>
-<h3>All of the information below is showing you what the properties above can do!</h3>
-<p id="one">Click here for all the information listed above!</p>
-<p id="two">Click here for all the information listed above!</p>
-<p id="three">Click here for all the information listed above!</p>
-<p id="four">Click here for all the information listed above!</p>
-<p id="five">Click here for all the information listed above!</p>
-<p id="six">Click here for all the information listed above!</p>
+              <input type="text" name="name" value=""> name<br><br>
+              <input type="text" name="email" value=""> email<br><br>
+              <input type="text" name="player" value=""> favorite player <br><br>
+              <legend>Color</legend>
+              <input type="radio" name="color" id="crlBlack" value="black" />
+              <label for="thin">Black</label>
+              <br><br>
+              <input type="submit" value="Submit">
+            </form>
 
 <script>
-  document.getElementById("one").innerHTML = "web browser name: " + navigator.appName;
-  document.getElementById("two").innerHTML = "web browser browser version: " + navigator.appVersion;
-  document.getElementById("three").innerHTML = "web browser location: " + navigator.geoLocation;
-  document.getElementById("four").innerHTML = "internet access: " + navigator.onLine;
-  document.getElementById("five").innerHTML = "operating system: " + navigator.platform;
-  document.getElementById("six").innerHTML = "user agent information: " + navigator.userAgent;
+        function validateForm() { // validates check
+            var asdf = document.forms["form"]["checkbox"].checked;
+            if (asdf == "") {
+              alert("Must check box");
+              return false;
+            }  
+            var asdf = document.forms["form"]["name"].value; //validates name
+            if (asdf == "") {
+              alert("Name must be filled out");
+              return false;
+            }
+            var asdf = document.forms["form"]["email"].value; //validates email
+            if (asdf == "") {
+              alert("E-mail must be filled out");
+              return false;
+            }
+            var asdf = document.forms["form"]["player"].value; //validates play you like
+            if (asdf == "") {
+              alert("Favorite player must be filled out");
+              return false;
+            }
+            var asdf = document.getElementsByTagName("color").value === false; //validated color selected
+            if (asdf == "") {
+              alert("Must select Color");
+              return false;
+            }
+          }
+          </script>
 
-  console.log("web browser name: " + navigator.appName);
-  console.log("web browser browser version: " + navigator.appVersion);
-  console.log("web browser location: " + navigator.geoLocation);
-  console.log("internet access: " + navigator.onLine);
-  console.log("operating system: " + navigator.platform);
-  console.log("user agent information: " + navigator.userAgent);
-</script>
 
-</div>
+    </div> <!-- end of content -->
 
 </body>
 
