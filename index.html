@@ -39,50 +39,8 @@
 
         <br><br><br>
 
-            <form name="form" action="/action_page.php" onsubmit="return validateForm()" method="post">
-              <h2>Enter your E-Mail for your chance to win!</h2> <br>
-              <input type="checkbox" name="checkbox"> I understand I might get emails. <br><br>
-
-              <input type="text" name="name" value=""> name<br><br>
-              <input type="text" name="email" value=""> email<br><br>
-              <input type="text" name="player" value=""> favorite player <br><br>
-              <legend>Color</legend>
-              <input type="radio" name="color" id="crlBlack" value="black" />
-              <label for="thin">Black</label>
-              <br><br>
-              <input type="submit" value="Submit">
-            </form>
-
-<script>
-        function validateForm() { // validates check
-            var asdf = document.forms["form"]["checkbox"].checked;
-            if (asdf == "") {
-              alert("Must check box");
-              return false;
-            }  
-            var asdf = document.forms["form"]["name"].value; //validates name
-            if (asdf == "") {
-              alert("Name must be filled out");
-              return false;
-            }
-            var asdf = document.forms["form"]["email"].value; //validates email
-            if (asdf == "") {
-              alert("E-mail must be filled out");
-              return false;
-            }
-            var asdf = document.forms["form"]["player"].value; //validates play you like
-            if (asdf == "") {
-              alert("Favorite player must be filled out");
-              return false;
-            }
-            var asdf = document.getElementsByTagName("color").value === false; //validated color selected
-            if (asdf == "") {
-              alert("Must select Color");
-              return false;
-            }
-          }
-          </script>
-
+        <h1>Site made for class GIT 417</h1>
+        <h2>For educational purposes only.</h2>
 
     </div> <!-- end of content -->
 
